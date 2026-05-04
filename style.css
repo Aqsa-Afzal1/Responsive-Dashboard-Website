@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.main {
+    height: 100vh;
+    width: 100%;
+}
+.wrapper, .slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.slide .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.slide .image-data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    padding: 0 15px;
+}
+.image-data .text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+.image-data h2 {
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 55px;
+}
+.image-data .button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    border-radius: 25px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.image-data .button:hover {
+    background: #4070f4;
+    color: #fff;
+}
+/* Navigation & Pagination colors */
+.nav-btn {
+    color: #fff;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+}
+.swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color: #4070f4;
+}
